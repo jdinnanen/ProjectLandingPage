@@ -1,0 +1,7 @@
+User-agent: *
+
+Disallow: /Brochure4/
+Disallow: /Game/
+Disallow: /Thunder Bay/
+Disallow: /Thunder%20Bay/
+Sitemap: https:jinnanen.bcitwebdeveloper.ca/sitemap.xml

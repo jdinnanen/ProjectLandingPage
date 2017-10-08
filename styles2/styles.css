@@ -1,0 +1,441 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS Reset */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+main {
+	display: block;	
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* End CSS Reset */
+
+/*font Styling*/
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Russo One', sans-serif;
+font-family: 'Economica', sans-serif;
+/*End Font Styling*/
+
+
+/* General Styling */
+body {
+overflow: hidden;
+}
+/*video background*/
+
+/* Video */
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+.no-video .video-container .poster,
+.touch .video-container .poster {
+    display: block !important;
+}
+.video-container {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+.video-container .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.video-container .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    top: 100px;
+}
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+/*Content Wrapper*/
+.wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		
+}
+/*header nav*/
+header {
+		position: relative;
+		padding: 20px 0 0;
+		width: 100vw;
+		height: 100px;
+		background-color: black;
+		z-index: 9000;
+		line-height: 200%;
+		border-bottom: 3px solid #464646;
+}
+header h1 {
+		display: block;
+		margin: auto;
+		width: 100vw;
+		font-family: 'Russo One', sans-serif;
+		letter-spacing: 3px;
+		font-weight: bold;
+		color: white;
+		text-align: center;
+		font-size: 2em;
+		padding: 0 0 13px 0;	
+}
+header h1 a{
+		text-decoration: none;
+		font-family: 'Russo One', sans-serif;
+		letter-spacing: 3px;
+		font-weight: bold;
+		color: white;
+		text-align: center;
+}
+header h1 a:hover {
+		text-shadow: 3px 3px #0E00C3;
+}
+/*top nav menu*/
+header nav {
+		
+}
+header nav ul {
+		display: flex;
+		justify-content: center;
+		width: 100vw;
+}
+header nav li {
+		float: left;
+		width: calc(960px/8);
+		text-align: center;
+		border-right: 1px solid grey;
+		/*Nav Hover Effect*/
+		box-shadow: inset 0 0 0 0 #000000;
+		-webkit-transition: all ease 0.8s;
+		-moz-transition: all ease 0.8s;
+		transition: all ease 0.8s;
+}
+header nav li:last-child {
+		border-right: none;
+}
+header nav li:hover, header nav li.focus{
+		box-shadow: inset 0 32px 0 0 #0E00C3;
+}
+header nav li a {
+		font-family: 'Russo One', sans-serif;
+		text-decoration: none;
+		color: white;
+		font-size: 1em;
+}
+/*End Header Nav*/
+
+/*Page Sub Menu*/
+.sub-menu {
+		position: relative;
+		margin: auto;
+		overflow: hidden;
+		width: 960px;
+		height: 60px;
+		z-index: 500;
+}
+.sub-menu h1 {
+		font-family: 'Russo One', sans-serif;
+		letter-spacing: 3px;
+		font-size: 1.4em;
+		margin-bottom: 3px;
+}
+.sub-menu a {
+		font-family: 'Russo One', sans-serif;
+		font-size: 1em;
+		text-decoration: none;
+		color: white;
+		border-right: 1px solid grey;
+		padding-left: 20px;
+		padding-right: 20px;
+		text-align: left;
+		float: left;
+		line-height: 22px;
+		box-shadow: inset 0 0 0 0 #000000;
+		-webkit-transition: all ease 0.8s;
+		-moz-transition: all ease 0.8s;
+		transition: all ease 0.8s;
+}
+.sub-menu a:hover,
+.sub-menu a:focus {
+		box-shadow: inset 0 22px 0 0 #0E00C3;
+}
+.sub-menu a:last-child {
+		border-right: none;
+}
+.sub-menu article {
+		background-color: black;
+		color: white;
+		transition: all 0.75s ease;
+		padding: 10px 30px;
+		border: 1px solid grey;
+		border-bottom: 3px solid #464646;
+		border-top: 0px;
+}
+/*change states*/
+.sub-menu article.hidden {
+		position: absolute;
+		top: 0;
+		left: -100%;
+		width: 100%;
+		height: 60px;
+		z-index: 525;
+}
+.sub-menu article.visable {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 60px;
+		z-index: 550;
+}
+
+/*colors for testing
+.sub-menu article.about {
+		background-color: lightblue;
+}
+.sub-menu article.html {
+		background-color: lightgreen;
+}
+.sub-menu article.java {
+		background-color: lightgray;
+}
+.sub-menu article.responsive {
+		background-color: red;
+}
+.sub-menu article.php {
+		background-color: red;
+}
+.sub-menu article.wordpress {
+		background-color: red;
+}
+.sub-menu article.client {
+		background-color: red;
+}
+.sub-menu article.portfolio {
+		background-color: red;
+}
+*/
+/*End Menu*/
+
+/*Section styles*/
+.active-page {
+		position: relative;
+		margin: auto;
+		width: 960px;
+		height: calc(100% - 230px);
+}
+.active-page article {
+		padding: 20px 30px;
+		width: 960px;
+		height: 100%;
+		transition: all 0.5s ease;
+		background-color: black;
+		color: white;
+		border-left: 1px solid grey;
+		border-right: 1px solid grey;
+		overflow: auto;
+		
+}
+.active-page article a {
+		text-decoration: none;
+		color: white;
+}
+.active-page article h1 {
+		font-family: 'Economica', sans-serif;
+		font-size: 1.8em;
+		margin-bottom: 10px;
+		border-bottom: 2px solid #0E00C3;
+}
+.active-page article p {
+		font-family: 'Roboto', sans-serif;
+		font-size: 1.2em;
+		width: 500px;
+}
+.active-page article p.contact {
+		line-height: 2;
+}
+.active-page article.pagehidden {
+		position: absolute;
+		top: -400%;
+		left: 0;
+		z-index: 300;
+		transition: all 1s ease;
+}
+.active-page article.pagevisable {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 400;
+		transition: all 1s ease;
+}
+.active-page article p.test {
+		line-height: 2;
+}
+.active-page article img {
+		float: right;
+		height: 400px;
+		margin-top: 40px;
+		margin-left: 20px;
+		border: 2px outset darkgrey;
+}
+.active-page article img.selfie {
+		margin: 40px 0 0 30px;
+		width: 400px;
+		height: 322px;
+}
+.active-page article img.comingsoon {
+		border: none;
+		float: right;
+		margin-left: 20px;
+		width: 400px;
+		height: 196px;
+}
+
+/*colors for testing purposes
+
+.active-page article.contact {
+		background-color: lightblue;
+}
+.active-page article.html {
+		background-color: lightgreen;
+}
+.active-page article.java {
+		background-color: lightgray;
+}
+.active-page article.responsive {
+		background-color: red;
+}
+.active-page article.php {
+		background-color: red;
+}
+.active-page article.wordpress {
+		background-color: red;
+}
+.active-page article.client {
+		background-color: red;
+}
+.active-page article.portfolio {
+		background-color: red;
+}
+*/
+
+/* Footer Stylings */
+footer {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100vw;
+		height: 80px;
+		background-color: black;
+		color: white;
+		padding: 30px 0 0;
+		z-index: 8000;
+		border-top: 3px solid #464646;
+}
+footer p {
+		float: left;
+		display: inline-block;
+		width: 50vw;
+		padding-right: 15px;
+		font-family: 'Russo One', sans-serif;
+		font-size: 1.2em;
+		text-align: right;
+		line-height: 24px;
+}
+footer a {
+		text-decoration: none;
+}
+footer ul {
+		float: left;
+		padding-left: 15px;
+		width: 50vw;
+		height: 24px;
+}
+footer li {
+		display: inline-block;
+		width: calc(480px/6);
+		margin: auto;
+}
+footer ul img {
+		width: 24px;
+		height: 24px;
+}
+footer ul img:hover {
+		background-color: #0E00C3;
+		box-shadow: 2px 2px #0E00C3;
+}
